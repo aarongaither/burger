@@ -9,7 +9,7 @@ const burger = {
     orm.create(this.table, cols, vals, res => cb(res));
   },
   updateOne: function(col, val, whereCol, whereCond, cb) {
-    orm.update(this.table, col, val, whereCol, whereCond, res => cb(res));
+    orm.updateOne(this.table, col, val, whereCol, whereCond, res => cb(res));
   },
   remove: function(whereCol, whereCond, cb) {
     orm.remove(this.table, whereCol, whereCond, res => cb(res));

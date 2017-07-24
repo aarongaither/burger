@@ -10,8 +10,9 @@ const orm = {
 	},
 	create: (table, cols, vals, cb) => {
 		let queryString = `INSERT INTO ${table}
-						(${cols.toString})
+						(${cols.toString()})
 						VALUES (${_makeQuestionMarks(vals.length)});`;
+		console.log(queryString, vals)
 		conn.query(queryString, vals, (err, result) => err ? _throw(err) : cb(result))
 	},
 	updateOne: (table, col, val, whereCol, whereCond, cb) => {

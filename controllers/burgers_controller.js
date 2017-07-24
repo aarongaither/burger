@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  burger.create(["name"], [req.body.name], () => res.redirect("/"));
+  burger.create(["burger_name"], [req.body.name], () => res.redirect("/"));
 });
 
 router.put("/:id", (req, res) => {
